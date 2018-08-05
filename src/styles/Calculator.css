@@ -1,0 +1,99 @@
+.calculator{
+  background-color: #b9b3b3;
+  margin: auto;
+  width: 60%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calculator > * {
+  flex: 1;
+}
+
+.screen {
+  flex: 0 0 100%;
+  text-align: right;
+  margin: 0 auto auto auto;
+  font-size: 2em;
+}
+
+.displayScreen {
+  background-color: #292828;
+  color: white;
+  padding: 1em;
+  height: 3em;
+}
+
+.queryScreen {
+  height: 2em;
+  margin: auto;
+  padding: 0.5em 1em;
+}
+
+.calculator > div[data-face] {
+  order: 20;
+  min-width: 25%;
+  font-size: 2em;
+}
+
+.calculator > div[data-face="1"] {
+
+}
+
+.calculator > div[data-face="7"] {
+  order:1
+}
+
+.calculator > div[data-face="8"] {
+  order:2
+}
+
+.calculator > div[data-face="9"] {
+  order:3
+}
+
+.calculator > div[data-face="/"] {
+  order:4
+}
+
+.calculator > div[data-face="4"] {
+  order:5
+}
+
+.calculator > div[data-face="5"] {
+  order:6
+}
+
+.calculator > div[data-face="6"] {
+  order:7
+}
+
+.calculator > div[data-face="*"] {
+  order:8
+}
+
+.calculator > div[data-face="1"] {
+  order:9
+}
+
+.calculator > div[data-face="2"] {
+  order:10
+}
+
+.calculator > div[data-face="3"] {
+  order:11
+}
+
+.calculator > div[data-face="-"] {
+  order:12
+}
+
+.calculator > div[data-face="0"] {
+  order:13
+}
+
+.calculator > div[data-face="="] {
+  flex: 2;
+}
