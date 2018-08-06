@@ -41,18 +41,36 @@ export function isOperator(value) {
   }
 }
 
+export function combineNumbersWithinQuery(queryArray) {
+  let fixQuery = [];
+
+  for(let i = 0; i < queryArray.length; i++) {
+    if(!isOperator(queryArray[i])) {
+      if(isOperator(fixQuery[fixQuery.length - 1]) || fixQuery.length === 0) {
+        fixQuery.push(queryArray[i]);
+      }
+      else {
+        fixQuery[fixQuery.length - 1] = fixQuery[fixQuery.length - 1] + '' + (queryArray[i]);
+      }
+    }
+    else {
+      fixQuery.push(queryArray[i]);
+    }
+  }
+  console.log(fixQuery);
+  return fixQuery;
+}
+
+
 export function infexExpression(queryArray) {
-  console.log(queryArray);
   if(queryArray.length === 1) {
     return queryArray[0];
   }
   let operators = ['/','*','-','+'];
   operators.forEach(operator => {
-    console.log(operator);
     let index = queryArray.findIndex(element => element === operator);
     if(index >= 0) {
       let result = operate(queryArray[index], Number(queryArray[index - 1]), Number(queryArray[index + 1]));
-      console.log(result);
       queryArray.splice(index - 1, 3, result);
       return;
     }

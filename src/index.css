@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: lightblue;
+  background-color: #3e3e40d1;
+  font-family: 'Russo One', sans-serif;
 }
 
 #root {
