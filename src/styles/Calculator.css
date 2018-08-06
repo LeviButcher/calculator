@@ -18,6 +18,7 @@
   text-align: right;
   margin: 0 auto auto auto;
   font-size: 2em;
+  max-width: 100%;
 }
 
 .displayScreen {
@@ -25,6 +26,9 @@
   color: white;
   padding: 1em;
   height: 3em;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .queryScreen {
@@ -33,6 +37,8 @@
   color: #ffffff91;
   margin: auto;
   padding: 0.5em 1.5em;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .calculator > div[data-face] {
@@ -129,4 +135,11 @@
 .calculator > div[data-face="+"] {
   color: #039F9B;
   background-color: #292828;
+}
+
+@media only screen and (max-width: 600px) {
+  .calculator {
+    width: 300px;
+    height: 350px;
+  }
 }
