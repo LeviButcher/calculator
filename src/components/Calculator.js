@@ -132,7 +132,6 @@ let Button = (props) => {
       break;
   }
 
-
   return(
     <div onClick={props.clickHandler} data-face={props.face} title={title}>
       {props.face}
